@@ -1,4 +1,8 @@
-.header {
+.menu {
+  background-color: brown;
+  width: 100%;
+  z-index: 3;
+
   &__logo {
     width: 200px;
     height: 50px;
@@ -8,53 +12,121 @@
     background-image: url("../../assets/images/logo.png");
   }
 
-  &__call {
-    width: 34px;
-    height: 34px;
+  &__logo-link {
+    display: block;
+    font-size: 2em;
+    padding: 10px 20px;
+    text-decoration: none;
+  }
+
+  &__phone {
+    width: 32px;
+    height: 32px;
     background-color: green;
     background-size: contain;
     background-repeat: no-repeat;
     background-image: url("../../assets/images/call.png");
-    margin: 0 auto;
     margin-bottom: 5px;
+  }
+
+  &__button {
+      position: relative;
+      width: 130px;
+      height: 35px;
+  }
+
+  &__button-icon, &__button-title {
 
   }
 
-  &__cv {
-    display: flex;
-    width: 200px;
-    height: 55px;
-    text-align: center;
-    padding-top: 10px;
-    justify-content: center;
-    margin: 0 auto;
-  }
-
-  &__cv-icon {
-    width: 30px;
-    height: 30px;
-    background-color: green;
+  &__button-icon {
+    width: 23px;
+    height: 23px;
     background-size: contain;
     background-repeat: no-repeat;
     background-image: url("../../assets/images/cv.png");
-    background-color: yellow;
+    left: 18%;
+    margin-left: -15px;
+    top: 50%;
+    margin-top: -12px;
+ 	  position: absolute;
   }
 
-  &__cv-title {
+  &__button-title {
     color: $white;
-    background-color: grey;
+    font-size: 12px;
+    font-family: 'Sora', sans-serif;
+    font-weight: 500;
+    display:inline-block;
+    vertical-align:middle;
+    margin-left: 8px;
   }
 
   &__button {
     border: none;
     display: block;
-
-    @media (min-width: 1200px) {
-      display: none;
-    }
+    background-color: $redorange;
   }
 
   &__button:focus {
     outline: 0;
   }
+
+  // Hamburger menu
+  &__toggle {
+    display: inline-block;
+    padding: .75em 15px;
+    line-height: 1em;
+    font-size: 1em;
+    color: #333;
+    background-color: grey;
+  }
+
+  &__toggle:hover, &__toggle:focus {
+      color: #c00;
+  }
+
+  &__bar {
+    width: 22px;
+   height: 2px;
+   background-color: black;
+   margin: 6px 0;
+  }
+
+  &__close-icon {
+    width: 60px;
+    height: 60px;
+    position: relative;
+  }
+
+  &__close-icon:after {
+      content: '';
+      height: 60px;
+      border-left: 2px solid #fff;
+      position: absolute;
+      transform: rotate(45deg);
+      left: 28px;
+  }
+
+  &__close-icon:before {
+      content: '';
+      height: 60px;
+      border-left: 2px solid #fff;
+      position: absolute;
+      transform: rotate(-45deg);
+      left: 28px;
+  }
+
+}
+
+/* Screen reader only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
 }

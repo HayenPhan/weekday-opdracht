@@ -9,34 +9,67 @@
 </head>
 <body>
   <main class="container">
-      <header class="header">
-          <a href="" class="header__logo-link">
-              <div class="header__logo"></div>
+      <header>
+          <!--Toggle-->
+          <a href="#main-menu"
+              id="main-menu-toggle"
+              class="menu__toggle"
+              aria-label="Open main menu">
+              <span class="sr-only">Open main menu</span>
+              <span class="menu__bars" aria-hidden="true">
+                  <div class="menu__bar"></div>
+                  <div class="menu__bar"></div>
+                  <div class="menu__bar"></div>
+              </span>
           </a>
-          <input class="header__btn" type="checkbox" id="menu-btn"> </input>
-          <label class="header__icon" for="menu-btn">
-              <span class="header__nav-icon"> </span>
-          </label>
-          <ul class="menu">
-              <li><a href="#personeel">Ik zoek personeel</a></li>
-              <li><a href="#personeel">Ik heb personeel over</a></li>
-              <li><a href="#personeel">Ik zit thuis/zoek een bijbaan</a></li>
-              <li><a href="#personeel"><div class="header__phone">Phone</div></a></li>
-              <li>
-                  <button class="header__button">
-                      <div class="header__button-icon">
-                          icon
-                      </div>
-                      <div class="header__button-title">
-                          title
-                      </div>
-                  </button>
-              </li>
-          </ul>
-      </header>
+
+          <!--Logo-->
+          <a href="" class="menu__logo-link">
+              <div class="menu__logo"></div>
+          </a>
+
+          <!--Menu-->
+          <nav id="main-menu" class="menu__main-menu" aria-label="Main menu">
+            <a href="#main-menu-toggle"
+                id="main-menu-close"
+                class="menu__close"
+                aria-label="Close main menu"
+                >
+
+                <span class="sr-only">Close main menu</span>
+                <span class="menu__close-icon" aria-hidden="true"></span>
+            </a>
+              <ul>
+                  <li><a href="#personeel">Ik zoek personeel</a></li>
+                  <li><a href="#personeel">Ik heb personeel over</a></li>
+                  <li><a href="#personeel">Ik zit thuis/zoek een bijbaan</a></li>
+                  <li><a href="#personeel"><div class="menu__phone"></div></a></li>
+                  <li>
+                      <button class="menu__button">
+                          <div class="menu__button-icon">
+
+                          </div>
+                          <span class="menu__button-title">
+                              Drop je CV
+                          </span>
+                      </button>
+                  </li>
+              </ul>
+          </nav>
+
+          <!--Menu Backdrop-->
+          <a href="#main-menu-toggle"
+              class="menu__backdrop"
+              tabindex="-1"
+              aria-hidden="true"
+              hidden> </a>
+
+        </header>
+
       <div class="hero">
         hero
       </div>
+
   </main>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

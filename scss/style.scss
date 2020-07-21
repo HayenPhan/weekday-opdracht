@@ -21,7 +21,8 @@ body {
   background-color: pink;
   padding-top: 20px;
 
-  @include media-breakpoint-up(lg) {
-    background-color: purple;
-  }
 }
+
+//   // Large devices (desktops, 992px and up)
+// @media (min-width: 992px) { ... }
+// }
