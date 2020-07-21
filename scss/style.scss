@@ -16,3 +16,12 @@ body {
     margin: 0;
     padding: 0;
 }
+
+.container {
+  background-color: pink;
+  padding-top: 20px;
+
+  @include media-breakpoint-up(lg) {
+    background-color: purple;
+  }
+}
