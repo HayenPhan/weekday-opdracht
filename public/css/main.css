@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@500;600&display=swap");
+.header__logo {
+  width: 200px;
+  height: 50px;
+  background-color: green;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("../../assets/images/logo.png"); }
+
+.header__call {
+  width: 34px;
+  height: 34px;
+  background-color: green;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("../../assets/images/call.png");
+  margin: 0 auto;
+  margin-bottom: 5px; }
+
+.header__cv {
+  display: flex;
+  width: 200px;
+  height: 55px;
+  text-align: center;
+  padding-top: 10px;
+  justify-content: center;
+  margin: 0 auto; }
+
+.header__cv-icon {
+  width: 30px;
+  height: 30px;
+  background-color: green;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("../../assets/images/cv.png");
+  background-color: yellow; }
+
+.header__cv-title {
+  color: #FFF;
+  background-color: grey; }
+
+.header__button {
+  border: none;
+  display: block; }
+  @media (min-width: 1200px) {
+    .header__button {
+      display: none; } }
+
+.header__button:focus {
+  outline: 0; }
+
+html,
+body {
+  margin: 0;
+  padding: 0; }
