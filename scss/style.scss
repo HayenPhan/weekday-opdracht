@@ -18,9 +18,18 @@ body {
 }
 
 .container {
-  background-color: pink;
   padding-top: 20px;
+}
 
+.header {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  @media (min-width: 992px) {
+      flex-direction: row;
+      justify-content: space-between;
+  }
 }
 
 //   // Large devices (desktops, 992px and up)

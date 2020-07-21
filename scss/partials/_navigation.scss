@@ -1,12 +1,10 @@
 .menu {
   background-color: brown;
-  width: 100%;
   z-index: 3;
 
   &__logo {
     width: 200px;
     height: 50px;
-    background-color: green;
     background-size: contain;
     background-repeat: no-repeat;
     background-image: url("../../assets/images/logo.png");
@@ -15,24 +13,37 @@
   &__logo-link {
     display: block;
     font-size: 2em;
-    padding: 10px 20px;
     text-decoration: none;
   }
 
   &__phone {
     width: 32px;
     height: 32px;
-    background-color: green;
     background-size: contain;
     background-repeat: no-repeat;
     background-image: url("../../assets/images/call.png");
     margin-bottom: 5px;
+
+    @media (min-width: 992px) {
+        margin-bottom: 0;
+        margin-top: 5px;
+    }
   }
 
   &__button {
       position: relative;
       width: 130px;
       height: 35px;
+      border: none;
+      background-color: $redorange;
+
+      @media (min-width: 992px) {
+          height: 40px;
+      }
+  }
+
+  &__button:focus {
+    outline: 0;
   }
 
   &__button-icon, &__button-title {
@@ -62,17 +73,8 @@
     margin-left: 8px;
   }
 
-  &__button {
-    border: none;
-    display: block;
-    background-color: $redorange;
-  }
-
-  &__button:focus {
-    outline: 0;
-  }
-
   // Hamburger menu
+
   &__toggle {
     display: inline-block;
     padding: .75em 15px;
@@ -87,34 +89,69 @@
   }
 
   &__bar {
+      background-color: black;
     width: 22px;
    height: 2px;
-   background-color: black;
    margin: 6px 0;
   }
 
-  &__close-icon {
-    width: 60px;
-    height: 60px;
-    position: relative;
+  &__nav-item {
+    display: flex;
+    justify-content: center;
+    font-family: 'Sora', sans-serif;
+    font-size: 14px;
+
+    margin-bottom: 8px;
+
+    @media (min-width: 992px) {
+        margin-bottom: 0;
+        margin-left: 40px;
+        height: 3em;
+    }
+
+    @media (min-width: 1200px) {
+        display: block;
+        line-height: 12px;
+    }
   }
 
-  &__close-icon:after {
-      content: '';
-      height: 60px;
-      border-left: 2px solid #fff;
-      position: absolute;
-      transform: rotate(45deg);
-      left: 28px;
+  &__nav-item a{
+      color: $black;
+      @media (min-width: 992px) {
+        display: inline-block;
+         vertical-align: middle;
+      }
   }
 
-  &__close-icon:before {
-      content: '';
-      height: 60px;
-      border-left: 2px solid #fff;
+  &__nav-item:before {
+      @media (min-width: 992px) {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        height: 100%;
+      }
+  }
+
+  &__navbar {
+      @media (min-width: 992px) {
+          margin-bottom: -5px;
+      }
+  }
+
+  &__toggle {
       position: absolute;
-      transform: rotate(-45deg);
-      left: 28px;
+      right: 0;
+      display: block;
+      background-color: $white;
+
+      // LG
+      @media (min-width: 992px) {
+          display: none;
+      }
+  }
+
+  &__main-menu {
+
   }
 
 }
@@ -129,4 +166,10 @@
   overflow: hidden;
   clip: rect(0,0,0,0);
   border: 0;
+}
+
+// Overwrite styles
+
+.navbar {
+    padding: 0;
 }

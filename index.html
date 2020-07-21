@@ -9,12 +9,22 @@
 </head>
 <body>
   <main class="container">
-      <header>
+      <header class="header">
+
+        <!--Logo-->
+        <a href="" class="menu__logo-link">
+            <div class="menu__logo"></div>
+        </a>
+
           <!--Toggle-->
           <a href="#main-menu"
-              id="main-menu-toggle"
               class="menu__toggle"
-              aria-label="Open main menu">
+              aria-label="Open main menu"
+              data-toggle="collapse"
+              data-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              >
               <span class="sr-only">Open main menu</span>
               <span class="menu__bars" aria-hidden="true">
                   <div class="menu__bar"></div>
@@ -23,28 +33,23 @@
               </span>
           </a>
 
-          <!--Logo-->
-          <a href="" class="menu__logo-link">
-              <div class="menu__logo"></div>
-          </a>
-
           <!--Menu-->
-          <nav id="main-menu" class="menu__main-menu" aria-label="Main menu">
+          <nav id="main-menu" class="menu__main-menu navbar navbar-expand-lg" aria-label="Main menu">
             <a href="#main-menu-toggle"
-                id="main-menu-close"
-                class="menu__close"
+                class="menu__close navbar-toggler"
                 aria-label="Close main menu"
                 >
 
                 <span class="sr-only">Close main menu</span>
                 <span class="menu__close-icon" aria-hidden="true"></span>
             </a>
-              <ul>
-                  <li><a href="#personeel">Ik zoek personeel</a></li>
-                  <li><a href="#personeel">Ik heb personeel over</a></li>
-                  <li><a href="#personeel">Ik zit thuis/zoek een bijbaan</a></li>
-                  <li><a href="#personeel"><div class="menu__phone"></div></a></li>
-                  <li>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="menu__navbar navbar-nav">
+                  <li class="menu__nav-item nav-item"><a href="#personeel">Ik zoek personeel</a></li>
+                  <li class="menu__nav-item nav-item"><a href="#personeel">Ik heb personeel over</a></li>
+                  <li class="menu__nav-item nav-item"><a href="#personeel">Ik zit thuis/zoek een bijbaan</a></li>
+                  <li class="menu__nav-item nav-item"><a href="#personeel"><div class="menu__phone"></div></a></li>
+                  <li class="menu__nav-item nav-item">
                       <button class="menu__button">
                           <div class="menu__button-icon">
 
@@ -55,14 +60,8 @@
                       </button>
                   </li>
               </ul>
+            </div>
           </nav>
-
-          <!--Menu Backdrop-->
-          <a href="#main-menu-toggle"
-              class="menu__backdrop"
-              tabindex="-1"
-              aria-hidden="true"
-              hidden> </a>
 
         </header>
 
