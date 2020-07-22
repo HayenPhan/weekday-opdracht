@@ -25,21 +25,21 @@
     margin-bottom: 5px;
 
     @media (min-width: 992px) {
-        margin-bottom: 0;
-        margin-top: 5px;
+      margin-bottom: 0;
+      margin-top: 5px;
     }
   }
 
   &__button {
-      position: relative;
-      width: 130px;
-      height: 35px;
-      border: none;
-      background-color: $redorange;
+    position: relative;
+    width: 130px;
+    height: 35px;
+    border: none;
+    background-color: $redorange;
 
-      @media (min-width: 992px) {
-          height: 40px;
-      }
+    @media (min-width: 992px) {
+      height: 40px;
+    }
   }
 
   &__button:focus {
@@ -60,7 +60,7 @@
     margin-left: -15px;
     top: 50%;
     margin-top: -12px;
- 	  position: absolute;
+    position: absolute;
   }
 
   &__button-title {
@@ -85,14 +85,14 @@
   }
 
   &__toggle:hover, &__toggle:focus {
-      color: #c00;
+    color: #c00;
   }
 
   &__bar {
-      background-color: black;
+    background-color: black;
     width: 22px;
-   height: 2px;
-   margin: 6px 0;
+    height: 2px;
+    margin: 6px 0;
   }
 
   &__nav-item {
@@ -103,50 +103,50 @@
     margin-bottom: 20px;
 
     @media (min-width: 992px) {
-        margin-bottom: 0;
-        margin-left: 40px;
-        height: 3em;
+      margin-bottom: 0;
+      margin-left: 40px;
+      height: 3em;
     }
 
     @media (min-width: 1200px) {
-        display: block;
-        line-height: 12px;
+      display: block;
+      line-height: 12px;
     }
   }
 
   &__nav-item a{
-      color: $black;
-      @media (min-width: 992px) {
-        display: inline-block;
-         vertical-align: middle;
-      }
+    color: $black;
+    @media (min-width: 992px) {
+      display: inline-block;
+      vertical-align: middle;
+    }
   }
 
   &__nav-item:before {
-      @media (min-width: 992px) {
-        content: '';
-        display: inline-block;
-        vertical-align: middle;
-        height: 100%;
-      }
+    @media (min-width: 992px) {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      height: 100%;
+    }
   }
 
   &__navbar {
-      @media (min-width: 992px) {
-          margin-bottom: -5px;
-      }
+    @media (min-width: 992px) {
+      margin-bottom: -5px;
+    }
   }
 
   &__toggle {
-      position: absolute;
-      right: 0;
-      display: block;
-      background-color: $white;
+    position: absolute;
+    right: 0;
+    display: block;
+    background-color: $white;
 
-      // LG
-      @media (min-width: 992px) {
-          display: none;
-      }
+    // LG
+    @media (min-width: 992px) {
+      display: none;
+    }
   }
 
   &__main-menu {
@@ -170,5 +170,5 @@
 // Overwrite styles
 
 .navbar {
-    padding: 0;
+  padding: 0;
 }

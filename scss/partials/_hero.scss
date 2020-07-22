@@ -1,155 +1,189 @@
 .hero {
-  &__img {
-    background-color: pink;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url("../../assets/images/residential--mobile.png");
-    margin-bottom: 50px;
-    height: 350px;
-    padding: 0;
+&__img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../../assets/images/residential--mobile.png");
+  margin-bottom: 50px;
+  height: 350px;
+  padding: 0;
 
-    @media (min-width: 500px) {
-      height: 500px;
-    }
+  @media (min-width: 500px) {
+    height: 500px;
+  }
+
+  @media (min-width: 768px) {
+    background-image: url("../../assets/images/residential--desktop.png");
+  }
+
+  @media (min-width: 992px) {
+    order: 2;
+    min-height: 400px;
+  }
+}
+
+&__intro-wrapper, &__intro-small-wrapper{
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
 
     @media (min-width: 768px) {
-      background-image: url("../../assets/images/residential--desktop.png");
-    }
-
-    @media (min-width: 992px) {
-      order: 2;
-      min-height: 400px;
-    }
-  }
-
-  &__intro-wrapper, &__intro-small-wrapper{
-      width: 100%;
-      padding-left: 50px;
-      padding-right: 50px;
-
-      @media (min-width: 768px) {
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      }
-  }
-
-  &__intro, &__intro-small {
-
-    @media (min-width: 992px) {
-        max-width: 450px;
-    }
-    @media (min-width: 1200px) {
-        max-width: 540px;
-    }
-  }
-
-  &__intro {
-    margin-bottom: 20px;
-    background-color: pink;
-  }
-
-  &__intro-small {
-    background-color: purple;
-  }
-
-  &__button-title, &__text, &__text-small {
-    font-family: 'Inter', sans-serif;
-  }
-
-  &__text {
-    font-size: 40px;
-    color: $black;
-    line-height: 1.2;
-
-    @media (min-width: 500px) {
-      max-width: 350px;
-      font-size: 43px;
-      background-color: green;
-    }
-    @media (min-width: 992px) {
-           max-width: 220px;
-           margin: 0 auto;
-    }
-  }
-
-  &__text-exception {
-    color: $redorange;
-  }
-
-  &__text-small {
-    font-size: 14px;
-    max-width: 180px;
-    margin-bottom: 40px;
-
-    @media (min-width: 768px) {
-      font-size: 16px;
-    }
-    @media (min-width: 992px) {
-      max-width: 300px;
-      font-size: 13px;
-      background-color: pink;
-      margin: 0 auto;
-      margin-left: 100px;
-      margin-bottom: 20px;
-    }
-  }
-
-  &__row {
-    display: flex;
-    flex-direction: row;
-
-    @media (min-width: 992px) {
+      padding: 0;
+      display: flex;
       flex-direction: column;
-      height: 500px;
+      justify-content: center;
     }
-  }
-
-  &__button {
-    display: inline-block;
-    display: flex;
-    border: none;
-    padding: 0.9rem 1rem;
-    margin: 0;
-    width: 149px;
-    height: 40px;
-    text-decoration: none;
-    background: $blue;
-    color: $white;
-    font-family: sans-serif;
-    font-size: 1rem;
-    cursor: pointer;
-    text-align: center;
 
     @media (min-width: 992px) {
+      flex-direction: row;
+    }
+}
+
+&__intro-wrapper {
+    @media (min-width: 992px) {
+        margin-top: 50px;
+    }
+}
+
+&__intro, &__intro-small {
+
+  @media (min-width: 992px) {
+      max-width: 450px;
+  }
+  @media (min-width: 1200px) {
+      max-width: 540px;
+  }
+}
+
+&__intro {
+  margin-bottom: 20px;
+
+  @media (min-width: 768px) {
+      margin-bottom: 0;
+  }
+
+  @media (min-width: 992px) {
+      margin-bottom: 20px;
+  }
+}
+
+&__intro-small {
+
+}
+
+&__button-title, &__text, &__text-small {
+  font-family: 'Inter', sans-serif;
+}
+
+&__text {
+  font-size: 40px;
+  color: $black;
+  line-height: 1.2;
+
+  @media (min-width: 500px) {
+    max-width: 350px;
+    font-size: 43px;
+  }
+  @media (min-width: 992px) {
+     max-width: 300px;
+     margin: 0 auto;
+    font-size: 50px;
+  }
+}
+
+&__text-exception {
+  color: $redorange;
+}
+
+&__text-small {
+  font-size: 14px;
+  max-width: 180px;
+  margin-bottom: 20px;
+
+  @media (min-width: 768px) {
+    font-size: 16px;
+  }
+  @media (min-width: 992px) {
+    max-width: 300px;
+    font-size: 15px;
+  }
+}
+
+&__text-small-wrapper {
+    @media (min-width: 768px) {
         margin: 0 auto;
-        margin-left: 100px;
+        margin-top: 10px;
     }
+    @media (min-width: 992px) {
+        max-width: 300px;
+        margin: 0;
+        margin-left: -12px;
+    }
+}
+
+&__row {
+  display: flex;
+  flex-direction: row;
+
+  @media (min-width: 992px) {
+    flex-direction: column;
+    height: 500px;
+  }
+}
+
+&__button {
+  display: inline-block;
+  display: flex;
+  border: none;
+  padding: 0.9rem 1rem;
+  margin: 0;
+  width: 149px;
+  height: 40px;
+  text-decoration: none;
+  background: $blue;
+  color: $white;
+  font-family: sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+
+  @media (min-width: 992px) {
+      width: 220px;
+      height: 50px;
+  }
+}
+
+&__button-title {
+  font-size: 10px;
+
+  @media (min-width: 768px) {
+    width: 100px;
   }
 
-  &__button-title {
-    font-size: 10px;
+  @media (min-width: 992px) {
+      font-size: 14px;
+      width: 100%;
+  }
+}
 
-    @media (min-width: 768px) {
-      width: 100px;
-    }
+&__button-heart {
+  width: 12px;
+  height: 12px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 2px;
+  margin-right: 3px;
+  background-image: url("../../assets/images/heart.png");
+
+  @media (min-width: 768px) {
+    width: 15px;
+    height: 14px;
+    margin-top: 1px;
+    margin-left: -3px;
   }
 
-  &__button-heart {
-    width: 12px;
-    height: 12px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin-top: 2px;
-    margin-right: 3px;
-    background-image: url("../../assets/images/heart.png");
+  @media (min-width: 992px) {
+    width: 20px;
+    height: 20px;
 
-    @media (min-width: 768px) {
-      width: 15px;
-      height: 14px;
-      margin-top: 1px;
-      margin-left: -3px;
-    }
   }
+}
 }

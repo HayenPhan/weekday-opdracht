@@ -34,3 +34,9 @@ body {
       margin-bottom: 40px;
   }
 }
+
+.hero {
+    @media (min-width: 768px) {
+        margin-bottom: 40px;
+    }
+}
