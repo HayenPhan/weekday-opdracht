@@ -7,6 +7,7 @@
         margin-bottom: 50px;
         height: 350px;
         padding: 0;
+        background-color: green;
 
         @media (min-width: 500px) {
             height: 500px;
@@ -22,16 +23,19 @@
         padding-right: 50px;
 
         @media (min-width: 768px) {
-
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
     }
 
     &__intro {
         margin-bottom: 20px;
+        background-color: pink;
     }
 
     &__intro-small {
-
+      background-color: purple;
     }
 
     &__button-title, &__text, &__text-small {
@@ -56,19 +60,27 @@
     &__text-small {
         font-size: 14px;
         width: 180px;
-        margin-bottom: 40px,
+        margin-bottom: 40px;
+
+        @media (min-width: 768px) {
+            font-size: 16px;
+        }
     }
 
     &__row {
         display: flex;
         flex-direction: row;
+
+        @media (min-width: 1200px) {
+            //flex-direction: row-reverse;
+        }
     }
 
     &__button {
       display: inline-block;
       display: flex;
       border: none;
-      padding: 1rem 1rem;
+      padding: 0.9rem 1rem;
       margin: 0;
       width: 149px;
       height: 40px;
@@ -83,6 +95,10 @@
 
     &__button-title {
         font-size: 10px;
+
+        @media (min-width: 768px) {
+            width: 100px;
+        }
     }
 
     &__button-heart {
@@ -93,5 +109,12 @@
         margin-top: 2px;
         margin-right: 3px;
         background-image: url("../../assets/images/heart.png");
+
+        @media (min-width: 768px) {
+            width: 15px;
+            height: 14px;
+            margin-top: 1px;
+            margin-left: -3px;
+        }
     }
 }
