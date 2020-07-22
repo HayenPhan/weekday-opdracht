@@ -1,0 +1,97 @@
+.hero {
+    &__img {
+        background-color: pink;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url("../../assets/images/residential--mobile.png");
+        margin-bottom: 50px;
+        height: 350px;
+        padding: 0;
+
+        @media (min-width: 500px) {
+            height: 500px;
+        }
+
+        @media (min-width: 768px) {
+            background-image: url("../../assets/images/residential--desktop.png");
+        }
+    }
+
+    &__intro, &__intro-small {
+        padding-left: 50px;
+        padding-right: 50px;
+
+        @media (min-width: 768px) {
+
+        }
+    }
+
+    &__intro {
+        margin-bottom: 20px;
+    }
+
+    &__intro-small {
+
+    }
+
+    &__button-title, &__text, &__text-small {
+        font-family: 'Inter', sans-serif;
+    }
+
+    &__text {
+        font-size: 40px;
+        color: $black;
+        line-height: 1.5;
+
+        @media (min-width: 500px) {
+            min-width: 500px;
+            font-size: 43px;
+        }
+    }
+
+    &__text-exception {
+        color: $redorange;
+    }
+
+    &__text-small {
+        font-size: 14px;
+        width: 180px;
+        margin-bottom: 40px,
+    }
+
+    &__row {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__button {
+      display: inline-block;
+      display: flex;
+      border: none;
+      padding: 1rem 1rem;
+      margin: 0;
+      width: 149px;
+      height: 40px;
+      text-decoration: none;
+      background: $blue;
+      color: $white;
+      font-family: sans-serif;
+      font-size: 1rem;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    &__button-title {
+        font-size: 10px;
+    }
+
+    &__button-heart {
+        width: 12px;
+        height: 12px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-top: 2px;
+        margin-right: 3px;
+        background-image: url("../../assets/images/heart.png");
+    }
+}
